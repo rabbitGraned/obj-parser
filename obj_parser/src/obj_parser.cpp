@@ -52,7 +52,7 @@ int main(int argc, char* argv[]) {
                 std::cout << "  Name: " << group.name << "\n";
                 std::cout << "  Start Index: " << group.startIndex << "\n";
                 std::cout << "  Polygon Count: " << group.count << "\n";
-                if (group.materialIndex != -1) {
+                if (group.materialIndex != -1 && group.materialIndex < static_cast<int>(mesh.materials.size())) {
                     std::cout << "  Material: " << mesh.materials[group.materialIndex].name << "\n";
                 }
                 else {
