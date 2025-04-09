@@ -16,8 +16,6 @@
  * MSVC (or F5 in Visual Studio):   cl /EHsc /O2 /std:c++20 obj_parser.cpp obj_mesh_parser.cpp /Fe:obj_parser
  */
 
-// 
-
 #include "obj_mesh_parser.h"
 
 #include <fstream>
