@@ -18,6 +18,7 @@ struct Polygon {
     std::array<int, 3> texCoordIndices = { -1, -1, -1 };
     std::array<int, 3> normalIndices = { -1, -1, -1 };
     int materialIndex = -1;
+    bool smoothing = true;
 };
 
 struct Material {
@@ -34,6 +35,7 @@ struct Group {
     size_t startIndex = 0;
     size_t count = 0;
     int materialIndex = -1;
+    bool smoothing = true;
 };
 
 struct Mesh {
@@ -52,9 +54,12 @@ Mesh parseOBJ(const std::string& filePath, WarningCallback warningCallback);
 
 void calculateNormals(Mesh& mesh);
 void parseMTL(const std::string& filePath, std::vector<Material>& materials, WarningCallback warningCallback);
-void triangulateQuad(const std::vector<int>& quad, std::vector<Polygon>& triangles);
+void triangulateQuad(const std::vector<int>& polygon, std::vector<Polygon>& triangles);
+
+/*
+void triangulatePolygon(const std::vector<int>& polygon, std::vector<Polygon>& triangles);
+*/
 
 //#endif // COMMONTEST
-
 
 #endif
