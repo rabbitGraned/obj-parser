@@ -26,11 +26,20 @@ Model: Kiramman's Key by rabbitGraned, artwork link: https://www.artstation.com/
 clang++ obj_parser.cpp obj_mesh_parser.cpp -o obj_parser.exe -O2 -std=c++20
 ./obj_parser.exe your_model.obj
 ```
+
+(Console)
+Use the test app (obj_parser.cpp) for parsing:
+obj_parser.* <path_to_model>
+and utility for visualization:
+modelsviewer.exe <path_to_model>
+
 ## Modelsviewer:
 
 The version in the Legacy branch has two variations: `modelsviewer` and `modelsviewer_dev` – 'dev' is compiled based on obj_mesh_parser.cpp from the dev branch, and the 'modelsviewer' is directly legacy.
 
-The modelsviewer is only available on Windows.
+Enter 'N' to display the normals.
+
+The `modelsviewer` is only available on Windows.
 
 ## License:
 
