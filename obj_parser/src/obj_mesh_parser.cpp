@@ -1,5 +1,6 @@
 /**
  * MAIN-LOGIC-FILE:     obj_parser.cpp
+ * HEADER-FILE:         obj_mesh_parser.h
  * 
  * This file implements the main logic for parsing OBJ files.
  *
